@@ -17,13 +17,13 @@ rl.question('Please enter a number : ', (answer1) => {
     if(answer1 == 1){
         console.log(tasklist)
     }if(answer1 == 2){
-        console.log(tasklist)
+        console.log()
     }if(answer1 == 3){
-        console.log(tasklist)
+        console.log()
     }if(answer1 == 4){
-        console.log(tasklist)
+        console.log()
     }if(answer1 == 5){
-        console.log(tasklist)
+        console.log()
     }
         rl.close(); 
     });
