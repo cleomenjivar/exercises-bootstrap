@@ -8,15 +8,36 @@
     <title>Parallax Test</title>
 </head>
 <body>
-    <section>
-        <img src="" class="layer1">
-        <h1 class="Layer">Are you ready?</h1>
-        <div></div>
-    </section>
-        
-    <section>
-        <div></div>
-    </section>
+    <header id="header">
+        <a class="logo">Carlos</a>
+    </header>
+        <section >
+            <img src="\\wsl$\Ubuntu\home\cleomenjivar\BECODE-TRAINING-CARLOS-MENJIVAR\parallax-page\Images\11_background.png" class="layer1" data-speed="-5">
+            <img src="\\wsl$\Ubuntu\home\cleomenjivar\BECODE-TRAINING-CARLOS-MENJIVAR\parallax-page\Images\01_ground.png" class="layer2" data-speed="-5">
+            <img src="\\wsl$\Ubuntu\home\cleomenjivar\BECODE-TRAINING-CARLOS-MENJIVAR\parallax-page\Images\03_distant_trees.png" class="layer3" data-speed="-5">
+            <img src="\\wsl$\Ubuntu\home\cleomenjivar\BECODE-TRAINING-CARLOS-MENJIVAR\parallax-page\Images\04_bushes.png" class="layer4" data-speed="-5">
+            <img src="\\wsl$\Ubuntu\home\cleomenjivar\BECODE-TRAINING-CARLOS-MENJIVAR\parallax-page\Images\05_hill1.png" class="layer5" data-speed="-5">
+            <img src="\\wsl$\Ubuntu\home\cleomenjivar\BECODE-TRAINING-CARLOS-MENJIVAR\parallax-page\Images\06_hill2.png" class="layer6" data-speed="-5">
+            <img src="\\wsl$\Ubuntu\home\cleomenjivar\BECODE-TRAINING-CARLOS-MENJIVAR\parallax-page\Images\07_huge_clouds.png" class="layer7" data-speed="-5">
+            <img src="\\wsl$\Ubuntu\home\cleomenjivar\BECODE-TRAINING-CARLOS-MENJIVAR\parallax-page\Images\08_clouds.png" class="layer7" data-speed="-8">
+            <img src="\\wsl$\Ubuntu\home\cleomenjivar\BECODE-TRAINING-CARLOS-MENJIVAR\parallax-page\Images\09_distant_clouds1.png" class="layer9" data-speed="-5">
+            <img src="\\wsl$\Ubuntu\home\cleomenjivar\BECODE-TRAINING-CARLOS-MENJIVAR\parallax-page\Images\10_distant_clouds.png" class="layer10" data-speed="-5">
+            <img src="" class="layer8" data-speed="-5">
+            <h1 class="text-layer">Are you ready?</h1>
+            <div></div>
+        </section>
 </body>
-    <script src=""></script>
+   <script type="text/javascript">
+       document.addEventListener("mousemove" , parallax);
+       function parallax(e) {
+           this.querySelectorAll('.Layer').array.forEach(layer => {
+               const speed = layer.getAttribute('data-speed' - e.pageX*speed)
+
+               const x = (window.innerWidth - e.pageX*speed)/100
+               const y = (window.innerHeigh - e.pageY*speed)/100
+
+               layer.style.transform = 'translateX(${x}px) translateY(${y}px)'
+           });
+       }
+   </script>
 </html>
