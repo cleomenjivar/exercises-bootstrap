@@ -7,10 +7,6 @@ CREATE TABLE `johnson` (
 
 INSERT INTO johnson (name, age, specialty) VALUES ('Snoop Diog', 1000, "Ruby");
 
-INSERT INTO johnson (name, age, specialty) VALUES ('P to the Y', 1000. "hacking your instagrams");
+INSERT INTO johnson (name, age, specialty) VALUES ('P to the Y', 1000. "hacking your instagrams")
 
-.mode column
 
-.headers on
-
-SELECT * FROM johnson;
