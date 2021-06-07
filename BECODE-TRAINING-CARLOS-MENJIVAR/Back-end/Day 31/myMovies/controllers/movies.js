@@ -4,6 +4,33 @@ const sqlite3 = require('sqlite3').verbose();
 
 
 
+let db = new sqlite3.Database('./db/db.moviedatabase');
+db.run('CREATE TABLE IF NOT EXISTS movies (Title TEXT, Year INT, Type TEXT, Poster TEXT, imdbID TEXT)');
+
+const  = (data) => {
+
+  //change data base name
+  let db = new sqlite3.Database('./db/db.moviedatabase');
+  db.run('INSERT INTO movies VALUES (?,?,?,?,?)', [data.Title, parseInt(data.Year), data.Type, data.Poster.data, data.imdbID],
+    function (err) {
+      if (err) {
+        return console.log(err);
+      }
+
+      console.log(`A movie was added with id $(this.lastID}`);
+    }
+  );
+
+  console.log(data);
+  db.close();
+};
+
+exports.addMovie = addMovie;
+
+
+// INFO
+
+/* const sqlite3 = require('sqlite3').verbose();
 
 const testdb = (req, res) => {
 
@@ -56,3 +83,6 @@ const addTest = (data) => {
 
 exports.addTest = addTest;
 exports.testdb = testdb;
+
+*/
+

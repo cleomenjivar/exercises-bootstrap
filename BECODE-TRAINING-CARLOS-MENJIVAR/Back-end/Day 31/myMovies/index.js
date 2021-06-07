@@ -10,17 +10,22 @@ app.use(express.json())
 app.use("/static", express.static("public"))
 app.set("view engine", "ejs");
 
-
 // pages and api
-app.get('/',(req, res) => {
+app.get('/', (req, res) => {
   res.render('movies.ejs');
 });
 
 app.post('/api/addtest', (req, res) => {
-   test.addTest(req.body)
+  test.addTest(req.body);
 })
-app.post('/api/test', test.testdb)
 
-//Add event or action
+//Added an Event
+
+app.post('/api/addmovie ', (req, res) => {
+  movie.addMovie(req.body);
+})
+
+app.post('/api/test', test.testdb);
+
 
 app.listen(3000, () => console.log("Server Up and running"));

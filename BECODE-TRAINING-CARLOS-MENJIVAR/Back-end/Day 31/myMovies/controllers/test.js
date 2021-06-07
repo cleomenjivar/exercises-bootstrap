@@ -2,10 +2,9 @@ const sqlite3 = require('sqlite3').verbose();
 
 
 
-
 const testdb = (req, res) => {
 
-  let sendData = {data: []};
+  let sendData = { data: [] };
 
   let db = new sqlite3.Database('db/db.moviedatabase', (err) => {
     if (err) {
@@ -13,7 +12,7 @@ const testdb = (req, res) => {
     }
     console.log('Connected to the movies database.');
   });
-   db.serialize(() => {
+  db.serialize(() => {
     db.each(`SELECT * FROM test`, (err, row) => {
       if (err) {
         console.error(err.message);
@@ -36,15 +35,16 @@ const testdb = (req, res) => {
 
 }
 
-const addTest = (data) => {
+const addTest = (data: any) => {
   let db = new sqlite3.Database('db/db.moviedatabase');
   // db.run(`INSERT INTO movie (title, url, type, year) VALUES ("terminator", "enroule.jpg", "film", "sdlfn")`, function(err) {
-  db.run(`INSERT INTO test (content) VALUES (?)`, [data.data], function(err) {
-      if (err) {
-        return console.log(err);
-      }
-      // get the last insert id
-      console.log(`A row has been inserted with rowid ${this.lastID}`);
+
+  db.run(`INSERT INTO test (content) VALUES (?)`, [data.data], function (err) {
+    if (err) {
+      return console.log(err);
+    }
+    // get the last insert id
+    console.log(`A row has been inserted with rowid ${this.lastID}`)
   });
 
   console.log(data)
