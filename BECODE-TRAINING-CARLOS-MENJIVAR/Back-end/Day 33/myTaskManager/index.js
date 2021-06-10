@@ -16,25 +16,26 @@ app.get('/', (req, res) => {
 });
 
 
-// Create here your api setup
+// create here your api setup
 
 app.post('/api/addTask', (req, res) => {
-  console.log("heloooo brain", req.body)
+  //console.log("Contacting the Brain", req.body)
   task.addTask(req.body);
-  console.log("reponse Backend", res.body)
+  //econsole.log("Responde Backend", res.body)
 })
 
-//
+// get tasks to load (api)
 
-app.post('/api/addtask', task.getTask)
+app.post('/api/addtask', task.getTask);
 
 
-// Server
+
+// server
 app.listen(3000, () => console.log("Server Up and running"));
 
 
 
-/*
+/* Guide
 app.post('/', (req, res) => {
   //console.log('Hello world')
   task.addTask(req.body, res)
