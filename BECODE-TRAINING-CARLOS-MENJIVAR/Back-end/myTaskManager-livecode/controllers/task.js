@@ -2,41 +2,6 @@ const sqlite3 = require('sqlite3').verbose();
 
 // BACKEND FILE FOR MY DATABASES QUERIES
 
-const addRecipe = (recipeFromTheBrain) => {
-    //code to add to the database
-
-    let db = new sqlite3.Database('/db/recipesdatabase.db');
-
-    //Insert a row into table
-    db.run('INSERT INTO recipes(Title TEXT NOT NULL, Content TEXT NOT NULL, Ingredients TEXT NOT NULL, Rating INTEGER NOT NULL)',[recipeFromTheBrain.input], function(err) {
-    if (err) {
-        return console.log(err.message);
-    }
-//Get a confirmation message
-    console.log('A row has been inserted');
-});
-
-//Close database
-db.close();
-}
-
-const fetchAllRecipesFromDb = (res) => {
-    let dataForTheUser = {recipe []}
-    let db = console.log("Calling from the Server");
-}
-
-// Backend Exports!
-
-exports.addRecipe = addRecipe
-exports.fetchRecipesFromDB = fetchRecipesFromDB
-
-
-
-
-
-
-
-/*
 const addTaskToDB = (taskFromTheBrain) =>{
   // code to add to the database
   // console.log("From the server I present:", taskFromTheBrain)
@@ -127,8 +92,9 @@ const deleteTaskFromDB = (taskId) => {
   });
 }
 
+
 exports.addTaskToDB = addTaskToDB;
 exports.fetchAllTasksFromDb = fetchAllTasksFromDb;
 exports.updateTaskOnDB = updateTaskOnDB;
 exports.deleteTaskFromDB = deleteTaskFromDB;
-*/
+

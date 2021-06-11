@@ -4,19 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,
   initial-scale=1.0">
-  <link rel="stylesheet" href="static/stylesheet/style.css" type="text/css">
+  <link rel="stylesheets" href="static/stylesheets/style.css" type="text/css">
   <title>My Recipes</title>
 </head>
 <body>
+  <p> My Recipes! <p>
     <div class="principal">
-    <div class="wrap">
-      <form class="formulario" action="">
-        <input type="text" id="tareaInput" placeholder="Write here the recipe you would like to add">
-        <input type="button" class="boton" id="btn-agregar" value="Add a New Recipe">
-        <input type="button" class="boton" id="btn-agregar" value="Load Recipes">
-      </form>
+      <div class="wrap">
+        <form class="formulario" action="">
+          <input type="text" id="Input" placeholder="Write here the recipe you would like to add"><br>
+          <input type="button" class="boton" id="btn-agregar" value="Add a New Recipe"><br>
+          <input type="button" class="boton" id="load-botton" value="Load Recipes"><br>
+        </form>
+      </div>
     </div>
-  </div>
+
+    <div class="tareas">
+      <div class="wrap">
+        <ul class="lista" id="lista">
+
+        </ul>
+    </div>
 
   <script src="static/scripts/recipes.js"></script>
 </body>

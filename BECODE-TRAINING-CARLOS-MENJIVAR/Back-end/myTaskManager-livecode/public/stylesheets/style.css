@@ -6,12 +6,6 @@
   box-sizing: border-box;
 }
 
-p {
-  color: green;
-  font-family: arial, helvetica, sans-serif;
-  font-size: 24px;
-}
-
 body {
   background: #FAFAFA;
   font-family: arial, helvetica, sans-serif;
@@ -68,6 +62,8 @@ body {
 
 .tareas .lista li {
   border-bottom: 1px solid #B6B6B6;
+  display: flex;
+  justify-content: space-between;
 }
 
 .tareas .lista li a {
@@ -79,4 +75,12 @@ body {
 
 .tareas .lista li a:hover {
   text-decoration: line-through;
+}
+
+.done-1{
+  text-decoration: line-through !important;
+}
+
+.deletebuton{
+  cursor: pointer;
 }
